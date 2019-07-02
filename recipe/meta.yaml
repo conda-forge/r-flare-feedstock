@@ -1,4 +1,4 @@
-{% set version = '1.6.0' %}
+{% set version = '1.6.0.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,19 +10,19 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/flare_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/flare/flare_{{ version }}.tar.gz
-  sha256: 21877e86f3e81a8d891ee1fbc47971e6325b6bf51c21b2c0e63825755472f179
+  sha256: 7c04b0089d169ec824b054e5a2e3fa7c839fbe44ae48aa565bb311493418f8e0
 
 build:
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{native}}toolchain        # [win]
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
     - {{posix}}sed               # [win]
@@ -70,7 +70,7 @@ extra:
 # Package: flare
 # Type: Package
 # Title: Family of Lasso Regression
-# Version: 1.6.0
+# Version: 1.6.0.1
 # Date: 2018-03-21
 # Author: Xingguo Li, Tuo Zhao, Lie Wang, Xiaoming Yuan, and Han Liu
 # Maintainer: Xingguo Li <xingguo.leo@gmail.com>
@@ -80,5 +80,5 @@ extra:
 # License: GPL-2
 # Repository: CRAN
 # NeedsCompilation: yes
-# Packaged: 2018-03-24 16:13:43 UTC; maomao-xingguo
-# Date/Publication: 2018-03-25 15:01:28 UTC
+# Packaged: 2019-07-02 07:04:17 UTC; ripley
+# Date/Publication: 2019-07-02 09:34:36
