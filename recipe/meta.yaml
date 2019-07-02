@@ -1,4 +1,4 @@
-{% set version = '1.6.0' %}
+{% set version = "1.6.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/flare_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/flare/flare_{{ version }}.tar.gz
-  sha256: 21877e86f3e81a8d891ee1fbc47971e6325b6bf51c21b2c0e63825755472f179
+  sha256: 529ae055276db505d63e1d814126fc11b5724746c77712692ab8fb61036f7833
 
 build:
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
