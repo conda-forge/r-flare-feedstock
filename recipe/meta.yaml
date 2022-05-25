@@ -1,4 +1,4 @@
-{% set version = "1.7.0" %}
+{% set version = "1.7.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/flare_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/flare/flare_{{ version }}.tar.gz
-  sha256: a18883ed47d2ead3bdf8521ffeb2461801e79d5c291a34c643da64fb6a132939
+  sha256: a5090c3306d0d6c1f025fc4fdf98fbab0b1e3cfa832a1951baee1f2ff05e79f7
 
 build:
   merge_build_host: true  # [win]
