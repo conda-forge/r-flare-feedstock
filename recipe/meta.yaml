@@ -1,4 +1,4 @@
-{% set version = "1.7.0.1" %}
+{% set version = "1.7.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/flare_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/flare/flare_{{ version }}.tar.gz
-  sha256: a5090c3306d0d6c1f025fc4fdf98fbab0b1e3cfa832a1951baee1f2ff05e79f7
+  sha256: 6ff7a31cc1a7a1b8ab75b7e53227fd10b83d4e54f815e465d8e46c85e2f676c4
 
 build:
-  number: 3
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
